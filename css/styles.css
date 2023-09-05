@@ -521,7 +521,7 @@ input[type='checkbox'] {
 .header {
 	padding-top: 7rem;
 	padding-bottom: 5.5rem;
-	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../images/bg-main.webp') center center no-repeat;
+	background-color: #353535;
 	background-size: cover;
 	text-align: center;
 }
@@ -620,8 +620,9 @@ input[type='checkbox'] {
 /*******************/
 .split .area-1 {
 	height: 430px;
-	background: linear-gradient(to bottom right, rgba(25, 26, 29, 0.5), rgba(25, 26, 29, 0.5)), url('../images/bg-img.jpg') center center no-repeat;
-	background-size: cover;
+	background:  url('../images/img.webp') center center no-repeat;
+	background-size: contain;
+	background-position: top;
 }
 
 .split .area-2 {
@@ -999,6 +1000,7 @@ a:hover.back-to-top {
 	.header {
 		padding-top: 11rem;
 		padding-bottom: 9rem;
+		background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../images/bg-main.webp') center center no-repeat;
 	}
 	/* end of header */
 
