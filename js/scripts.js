@@ -76,3 +76,48 @@
 	});
 
 })(jQuery);
+
+let submitState=true;
+let message;
+const formCheck=(e)=>{
+    if(e.target.id==="cname"){
+        let regex=/\d/;
+        submitState=regex.test(e.target.value)?false:true;
+        message="ERROR: Name cannot contains digits";
+        
+    }
+    if(e.target.id==="cemail"){
+        if(e.target.value!=''){
+        let regex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+        submitState=regex.test(e.target.value);
+        message="ERROR: Invalid email address";
+        }
+    }
+    if(!submitState){
+        let error=document.getElementById('error');
+        error.style.display='block';
+        error.innerHTML=message;
+    }
+}
+
+$("#submit-form").submit((e)=>{
+    e.preventDefault()
+    
+    
+
+    if(submitState){
+        $.ajax({
+        url:"https://script.google.com/macros/s/AKfycbzJL6smRbJDiyDzGgRBADfuxROTm3slM_QXEA9bAzHJhqWj57NodeQSEINXAsz4ISDX/exec",
+        data:$("#submit-form").serialize(),
+        method:"post",
+        success:function (response){
+            alert("Form submitted successfully")
+            window.location.reload()
+            //window.location.href="https://google.com"
+        },
+        error:function (err){
+            alert("Something Error")
+
+        }
+    })}
+})

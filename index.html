@@ -125,7 +125,7 @@
                         <p>Completed Higher Secondary from GVHSS Kinassery</p>
                         <div class="time">2016 - 2017</div>
                         <h6>Completed SSLC</h6>
-                        <p>Completed SSLC from GHSS Azhachavattom</p>
+                        <p>Completed SSLC from GHSS Azhchavattom</p>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -264,15 +264,15 @@
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
-                    
+                    <div id="error"></div>
                     <!-- Contact Form -->
                     <form id="submit-form" action="">
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" name="name" required>
+                            <input type="text" class="form-control-input" id="cname" name="name" required onblur="formCheck(event)">
                             <label class="label-control" for="cname">Name</label>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" name="email" required>
+                            <input type="email" class="form-control-input" id="cemail" name="email" required onblur="formCheck(event)">
                             <label class="label-control" for="cemail">Email</label>
                         </div>
                         <div class="form-group">
@@ -356,24 +356,5 @@
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
     <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
-    <script>
-        $("#submit-form").submit((e)=>{
-            e.preventDefault()
-            $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbzJL6smRbJDiyDzGgRBADfuxROTm3slM_QXEA9bAzHJhqWj57NodeQSEINXAsz4ISDX/exec",
-                data:$("#submit-form").serialize(),
-                method:"post",
-                success:function (response){
-                    alert("Form submitted successfully")
-                    window.location.reload()
-                    //window.location.href="https://google.com"
-                },
-                error:function (err){
-                    alert("Something Error")
-    
-                }
-            })
-        })
-    </script>
 </body>
 </html>
