@@ -107,7 +107,7 @@ $("#submit-form").submit((e)=>{
 
     if(submitState){
         $.ajax({
-        url:"https://script.google.com/macros/s/AKfycbzJL6smRbJDiyDzGgRBADfuxROTm3slM_QXEA9bAzHJhqWj57NodeQSEINXAsz4ISDX/exec",
+        // url:"https://script.google.com/macros/s/AKfycbzJL6smRbJDiyDzGgRBADfuxROTm3slM_QXEA9bAzHJhqWj57NodeQSEINXAsz4ISDX/exec",
         data:$("#submit-form").serialize(),
         method:"post",
         success:function (response){
